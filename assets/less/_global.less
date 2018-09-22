@@ -15,6 +15,7 @@ iframe {
 .main {
     min-height: 260px;
 }
+
 .navbar-brand {
     font-size: @font-size-h1;
     font-weight: 100;
@@ -24,12 +25,27 @@ iframe {
 }
 .navbar {
     text-transform: uppercase;
-    background: #000;
+    //background: #000;
 }
+
+img.mobile-cover {
+    margin-bottom: 20px;
+}
+
+// .home .navbar-default {
+//         background: #b5e0e1 url('../img/homepage@2x.png') no-repeat center center;
+// }
+
 .navbar-default {
     letter-spacing: 1px;
     border: none;
     min-height: 120px;
+    background: #b5e0e1;
+}
+
+
+.navbar-brand {
+    margin-left: -25px !important;
 }
 
 .navbar-nav>li>a{
@@ -50,9 +66,11 @@ text-align: center;
     line-height: @font-size-large*1.8;
 
 }
+
 .home .main {
-    margin: 40px 0;
+    margin: 30px 0;
 }
+
 .thumbnail-box {
     margin-bottom: @grid-gutter-width;
 
@@ -60,7 +78,7 @@ text-align: center;
 
 img.bandcamp{position: relative; top:-2px; height: auto; width: 40px;}
 footer {
-    background: #939598;
+    background: #b5e0e1;
     color: #fff;
     padding: 50px 0;
     text-align: center;
@@ -73,7 +91,7 @@ footer {
             margin: 0 10px;
             float: left;
             a {
-                color: #fff;
+                color: #f05e4a;
             }
         }
     }
@@ -84,15 +102,16 @@ header {
         height: 30px;
         margin-top: 10px;
         ul {
-            float: right;
+            float: left;
             list-style-type: none;
-            margin: 0 auto;
+            margin-right: -@navbar-padding-horizontal;
             font-size: 20px;
+            padding: 10px 10px 15px 0px;
             li {
                 margin: 0 10px;
                 float: left;
                 a {
-                    color: #BA9645;
+                    color: #f05e4a;
                 }
             }
         }
@@ -100,16 +119,32 @@ header {
 }
 @media (min-width: @screen-sm-min)  {
     .navbar-default {
-        background: url('../img/background.jpg') no-repeat center center;
         background-size: 100%;
-        border-bottom: 1px solid #ba9645;
     }
     .home .navbar-default {
-        background: url('../img/bigness-homepage-time-traveler.png') no-repeat center center;
+        background: #b5e0e1 url('../img/homepage@2x.png') no-repeat center center;
         background-size: 90%;
     }
     .home .navbar-default {
         min-height: 510px;
     }
+
+    .home .main {
+        margin: 40px 0;
+    }
+
+    header {
+        .social {
+            ul {
+                float: right;
+                padding: 0px;
+            }
+        }
+    }
 }
-@media (min-width: @screen-md-min)  {}@media (min-width: @screen-lg-min)  {}
+@media (min-width: @screen-md-min)  {
+    .navbar-nav {
+        float: right !important;
+    }
+}
+@media (min-width: @screen-lg-min)  {}
